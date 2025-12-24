@@ -37,5 +37,4 @@ service reads from.
 - `service_tags` (list of string) - The service tags for the hello_pack application
 - `service_name` (string) - The service name for the hello_pack application
 
-[pack-registry]: https://github.com/hashicorp/nomad-pack-community-registry
-# example-pack
+[pack-registry]: https://rmbl.openwander.org/
