@@ -1,10 +1,10 @@
 app {
-  url = ""
+  url = "https://github.com/open-wander/example-pack"
 }
 pack {
   name        = "hello_pack"
-  description = ""
-  version     = ""
+  description = "A simple Nomad job that runs as a service and can be accessed via HTTP."
+  version     = "0.0.1"
 }
 
 # Optional dependency information. This block can be repeated.

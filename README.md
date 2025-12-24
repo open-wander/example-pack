@@ -1,20 +1,16 @@
 # hello_pack
 
-<!-- Include a brief description of your pack -->
-
 This pack is a simple Nomad job that runs as a service and can be accessed via
 HTTP.
 
 ## Pack Usage
-
-<!-- Include information about how to use your pack -->
 
 ### Changing the Message
 
 To change the message this server responds with, change the "message" variable
 when running the pack.
 
-```
+```bash
 nomad-pack run hello_pack --var message="Hola Mundo!"
 ```
 
@@ -23,18 +19,16 @@ service reads from.
 
 ## Variables
 
-<!-- Include information on the variables from your pack -->
-
-- `message` (string:"Hello World!") - The message your application will respond with
-- `count` (number:2) - The number of app instances to deploy
-- `job_name` (string) - The name to use as the job name which overrides using
-  the pack name
-- `datacenters` (list of strings:["*"]) - A list of datacenters in the region which
-  are eligible for task placement
-- `region` (string) - The region where jobs will be deployed
-- `register_service` (bool: true) - If you want to register a Nomad service
-  for the job
-- `service_tags` (list of string) - The service tags for the hello_pack application
-- `service_name` (string) - The service name for the hello_pack application
+| Variable | Description | Type | Default |
+|Str|Str|Str|Str|
+|---|---|---|---|
+| `message` | The message your application will respond with | string | `"Hello World!"` |
+| `count` | The number of app instances to deploy | number | `2` |
+| `job_name` | The name to use as the job name which overrides using the pack name | string | `""` (Pack Name) |
+| `datacenters` | A list of datacenters in the region which are eligible for task placement | list(string) | `["*"]` |
+| `region` | The region where jobs will be deployed | string | `""` |
+| `register_service` | If you want to register a Nomad service for the job | bool | `true` |
+| `service_name` | The service name for the hello_pack application | string | `"webapp"` |
+| `service_tags` | The service tags for the hello_pack application | list(string) | `["urlprefix-/", "traefik.enable=true", ...]` |
 
 [pack-registry]: https://rmbl.openwander.org/
